@@ -1,8 +1,10 @@
 import sqlite3
+
 conn = sqlite3.connect('expenses.db')
 
 cur = conn.cursor()
 
+# Initalize database columns
 cur.execute("""CREATE TABLE IF NOT EXISTS expenses
 (id INTEGER PRIMARY KEY,
 Date DATE,
